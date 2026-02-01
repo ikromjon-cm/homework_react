@@ -1,6 +1,8 @@
 import Vector from '../public/Vector.png'
 import Dashboard from '../public/Dashboard.png'
 import Edu from '../public/edu.png'
+import Group from '../public/Group.png'
+import Dis from '../public/dis.png'
 import React from 'react'
 import Sidebar from './Sidebar/Sidebar'
 const data = [
@@ -13,15 +15,15 @@ const data = [
     title:'Dashboard'
   },
     {
-    img:Dashboard,
+    img:Vector,
     title:'course'
   },
     {
-    img:Dashboard,
+    img:Group,
     title:'task'
   },
     {
-    img:Dashboard,
+    img:Dis,
     title:'discussion'
   },
     {
@@ -30,7 +32,7 @@ const data = [
   },
       {
     img:Dashboard,
-    title:'calendar'
+    title:'settings'
   }
 
 
