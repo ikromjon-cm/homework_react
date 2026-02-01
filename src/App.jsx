@@ -26,8 +26,13 @@ const data = [
   },
     {
     img:Dashboard,
-    title:'Dashboard'
+    title:'calendar'
+  },
+      {
+    img:Dashboard,
+    title:'calendar'
   }
+
 
 
 
