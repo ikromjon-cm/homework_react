@@ -6,7 +6,7 @@ const Sidebar = ({data}) => {
     <div>
       {data.map((item ,index)=>
       <div key={index} className="sidebar">
-        <div className="sidebar_header">
+        <div style={{display: 'flex', }} className="sidebar_header">
         <img src={item.images} alt="img" />
         <h1>{item.headtitle}</h1>
         </div>
