@@ -3,6 +3,8 @@ import Dashboard from '../public/Dashboard.png'
 import Edu from '../public/edu.png'
 import Group from '../public/Group.png'
 import Dis from '../public/dis.png'
+import Calendar from '../public/Icons.png'
+import Settings from '../public/settings.png'
 import React from 'react'
 import Sidebar from './Sidebar/Sidebar'
 const data = [
@@ -27,11 +29,11 @@ const data = [
     title:'discussion'
   },
     {
-    img:Dashboard,
+    img:Calendar,
     title:'calendar'
   },
       {
-    img:Dashboard,
+    img:Settings ,
     title:'settings'
   }
 
