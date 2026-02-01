@@ -14,7 +14,7 @@ const data = [
   },
     {
     img:Dashboard,
-    title:'Dashboard'
+    title:'course'
   },
     {
     img:Dashboard,
