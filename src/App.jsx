@@ -18,11 +18,11 @@ const data = [
   },
     {
     img:Dashboard,
-    title:'Dashboard'
+    title:'task'
   },
     {
     img:Dashboard,
-    title:'Dashboard'
+    title:'discussion'
   },
     {
     img:Dashboard,
