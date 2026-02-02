@@ -1,10 +1,17 @@
+import React, { useState } from 'react';
 import "./Sidebar.css";
 import Logo from '../assets/Vector.png';
 import Picture from '../assets/Comunity.png';
 
 const Sidebar = ({ data, second, tasks }) => {
+  const [Open, setOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setOpen(!Open);
+  };
+
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${Open ? 'sidebar-open' : 'sidebar-closed'}`}>
       <div className='container'>
         <div className="contain">
           <div className="header">
@@ -29,7 +36,20 @@ const Sidebar = ({ data, second, tasks }) => {
       </div>
 
       <div className="containig">
-        <header>
+        <header style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <button
+            onClick={toggleSidebar}
+            style={{
+              padding: '8px 12px',
+              cursor: 'pointer',
+              backgroundColor: '#004677',
+              color: 'white',
+              border: 'none',
+              borderRadius: '6px'
+            }}
+          >
+            {Open ? 'Close Sidebar' : 'Open Sidebar'}
+          </button>
           <span><a className='logo' href="/">Dashboard</a></span>
         </header>
 
@@ -66,13 +86,13 @@ const Sidebar = ({ data, second, tasks }) => {
           <div className="scores-container">
             <h2 className="section-title">Student Test Scores</h2>
             <div className="score-user">
-               <div className="user-avatar">👤</div>
-               <div>
-                  <h4>Drew Newton</h4>
-                  <small>Class 12</small>
-               </div>
+              <div className="user-avatar">👤</div>
+              <div>
+                <h4>Drew Newton</h4>
+                <small>Class 12</small>
+              </div>
             </div>
-            
+
             <div className="score-item active-blue">
               <span>🎨 Art and Design</span>
               <strong>85</strong>
@@ -117,9 +137,8 @@ const Sidebar = ({ data, second, tasks }) => {
             </div>
           </div>
         </div>
-
-      </div> 
-    </div> 
+      </div>
+    </div>
   );
 };
 

@@ -25,28 +25,31 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 150px;
 }
 
 .header h2 {
   font-size: 22px;
   color: #333;
+  
 }
 
 .with {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   padding: 12px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
   color: #666;
+  margin-bottom: 20px;
+}
+.with p{
+  width: 30px;
+  height: 30px;
 }
 
-.with:hover {
-  background-color: #f0f0f0;
-}
 
 .underbottom {
   background-color: #fdf2f2;
@@ -107,7 +110,6 @@ header {
   border-radius: 20px;
   padding: 20px;
   flex: 1;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .imge {
@@ -201,4 +203,11 @@ header {
 .schedule-header span, .schedule-row span {
   flex: 1; 
   font-size: 14px;
+}
+.sidebar-closed .container {
+  display: none;
+}
+
+.sidebar-open .container {
+  display: flex;
 }
