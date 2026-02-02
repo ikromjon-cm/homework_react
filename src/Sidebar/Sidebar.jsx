@@ -1,15 +1,14 @@
 import "./Sidebar.css";
-import Logo from '../assets/Vector.png'
-import Picture from '../assets/Comunity.png'
+import Logo from '../assets/Vector.png';
+import Picture from '../assets/Comunity.png';
 
-
-const Sidebar = ({ data, second, tasks,  }) => {
+const Sidebar = ({ data, second, tasks }) => {
   return (
     <div className="wrapper">
       <div className='container'>
         <div className="contain">
           <div className="header">
-            <img src={Logo} alt="images" />
+            <img src={Logo} alt="logo" />
             <h2>EduWave</h2>
           </div>
 
@@ -24,7 +23,7 @@ const Sidebar = ({ data, second, tasks,  }) => {
         </div>
 
         <div className="underbottom">
-          <img src={Picture} alt="image" />
+          <img src={Picture} alt="premium" />
           <h3>Exclusive Community</h3>
           <p>Join to Premium for more functionality</p>
           <button>Join Now</button>
@@ -34,15 +33,6 @@ const Sidebar = ({ data, second, tasks,  }) => {
       <div className="containig">
         <header>
           <span><a className='logo' href="/">Dashboard</a></span>
-          <nav>
-            <ul className='navigator'>
-              <li><a className='nav_links' href="#">home</a></li>
-              <li><a className='nav_links' href="#">contact</a></li>
-              <li><a className='nav_links' href="#">contact us</a></li>
-              <li><a className='nav_links' href="#">services</a></li>
-              <li><a className='nav_links' href="#">blog</a></li>
-            </ul>
-          </nav>
         </header>
 
         <div className="middle">
@@ -65,10 +55,7 @@ const Sidebar = ({ data, second, tasks,  }) => {
           <div className="tasks-container">
             <h2 style={{ marginBottom: '24px' }}>Tasks From The Teacher</h2>
             {tasks.map((task) => (
-              <div
-                key={task.id}
-                className={`task-card ${task.active ? 'active' : 'light'}`}
-              >
+              <div key={task.id} className={`task-card ${task.active ? 'active' : 'light'}`}>
                 <div className="task-info">
                   <h4>{task.title}</h4>
                   <small>🕒 {task.date}</small>
@@ -77,25 +64,44 @@ const Sidebar = ({ data, second, tasks,  }) => {
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="tasks-container">
-            <h2 style={{ marginBottom: '24px' }}>Tasks From The Teacher</h2>
-            {tasks.map((task) => (
-              <div
-                key={task.id}
-                className={`task-card ${task.active ? 'active' : 'light'}`}
-              >
-                <div className="info">
-                  <h4>{task.title}</h4>
-                  <small>🕒 {task.date}</small>
-                </div>
-                <div className="arrow-icon">›</div>
-              </div>
-            ))}
+        {/* --- RASMDAGI JADVAL ENDI SAYTNING ENG TAGIDA --- */}
+        <div className="exam-section">
+          <h2>Exam Schedule</h2>
+          <div className="schedule-box">
+            <div className="schedule-header">
+              <span>Date and time</span>
+              <span>Start Time</span>
+              <span>Subjects</span>
+              <span>Exam Room</span>
+            </div>
+
+            <div className="schedule-row">
+              <span>Mon, April 29 2024</span>
+              <span>8.00</span>
+              <span>Plant Research</span>
+              <span>Science Laboratory</span>
+            </div>
+
+            <div className="schedule-row">
+              <span>Tue, April 30 2024</span>
+              <span>9.00</span>
+              <span>English</span>
+              <span>Classroom</span>
+            </div>
+
+            <div className="schedule-row">
+              <span>Wed, May 1 2024</span>
+              <span>8.00</span>
+              <span>Mathematics</span>
+              <span>Classroom</span>
+            </div>
           </div>
-        </div> 
-      </div>
-    </div>
+        </div>
+
+      </div> 
+    </div> 
   );
 };
 

@@ -156,3 +156,37 @@ transition: .3s;
   color: #333;
 }
 
+.exam-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  /* margin-bottom: 40px; */
+}
+
+.schedule-box {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.schedule-header span, .schedule-row span {
+  width: 25%; /* To'rtta ustunni teng bo'lish uchun */
+  text-align: left;
+}
