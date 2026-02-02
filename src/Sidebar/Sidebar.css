@@ -1,232 +1,204 @@
-.wrapper{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.wrapper {
   display: flex;
+  background-color: #f5f7f9; 
+  min-height: 100vh;
 }
-.containing{
-  background-color: #000;
-}
-.container{
-  margin-top: -40px;
-  padding-top: 40px;
-  padding-left: 20px ;
-  background-color: #f0f0f0;
-  width: 253px;
-  height: 100vh;
+
+.container {
+  width: 260px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  display: flex;
   flex-direction: column;
-  gap: 40px;
-  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid #eee;
 }
-.header{
+
+.header {
   display: flex;
   align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
 }
-.with{
+
+.header h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.with {
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 20px;
-  width: 210px;
-  height: 70px;
+  gap: 15px;
+  padding: 12px;
   border-radius: 10px;
-  padding:5px 10px;
-  margin: 8px 0px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #666;
 }
-.underbottom{
-  display: flex;
-  flex-direction: column;
+
+.with:hover {
+  background-color: #f0f0f0;
+}
+
+.underbottom {
+  background-color: #fdf2f2;
+  padding: 20px;
+  border-radius: 15px;
   text-align: center;
-  align-items: center;
-  margin-left: -17px;
 }
-/* Tasks va Scoresni yonma-yon qilish uchun */
+
+.underbottom img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.underbottom h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.underbottom p {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.underbottom button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.containig {
+  flex: 1;
+  padding: 30px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.carts {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.cart {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.imge {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .main-grid {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 25px;
+  margin-bottom: 40px;
 }
 
 .tasks-container, .scores-container {
-  flex: 1; /* Ikkalasi teng joy oladi */
+  flex: 1; 
   background: white;
-  padding: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
   border-radius: 15px;
+  margin-bottom: 15px;
+  background: #f8f9fa;
+  border: 1px solid #eee;
+}
+
+.task-card.active {
+  background-color: #004677;
+  color: white;
 }
 
 .score-user {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 20px;
+}
+
+.user-avatar {
+  font-size: 30px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .score-item {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 18px;
   background: #f8f9fa;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  font-weight: bold;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
 }
 
 .score-item.active-blue {
-  background: #004677; /* To'q ko'k rang */
+  background-color: #004677;
   color: white;
 }
 
-.section-title {
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-.underbottom img{
-  width: 150px;
-  height: 92px;
-
-}
-.underbottom p{
-  margin-top: -10px;
-}
-.containing{
-  width: 100%;
-}
-header{
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 180px;
-}
-.logo{
-  font-size: 26px;
-  font-weight: 600;
-  color: #686666;
-}
-.navigator{
-  display: flex;
-  gap: 30px;
-}
-.nav_links{
-  color: #b4adad;
-  font-size: 18px;
-  position: relative;
-
-}
-.nav_links::before{
-  content: '';
-position: absolute;
-width: 0;
-height: 2px;
-background: #e2bcbc;
-top: 100%;
-left: 0;
-transition: .3s;
-}
-.carts{
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  margin-left: 20px;
-}
-.cart{
-  background-color: #fff;
-  border-radius: 20px;
-  width: 214px;
-  height: 262px;
-  padding: 20px;
-  
-}
-.cart h4{
- margin-top: 15px;
- font-size: 20px;
-
-}
-.icons{
-  width: 25px;
-}
-
-.rightwards{
-  display: flex;
-  justify-content: space-between;
-}
-.imge{
-  width: 174px;
-  height: 118px;
-}
-.subtitue{
-  font-size: 10px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.cart button{
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
-.tasks-wrap{
-  display: flex;
-  gap: 20px;
-  margin-left: 20px;
-}
-.tasks-container {
-  padding: 24px;
-  border-radius: 12px;
-  width: 329px;
-  background-color: #e1e3e6;
-}
-
-.task-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  border-radius: 14px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition:  0.3s ease;
-  cursor: pointer;
-}
-
-
-
-.task-card.light {
-  background-color: #ffffff;
-  color: #333;
-}
-
 .exam-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px 0;
-  /* margin-bottom: 40px; */
-}
-
-.schedule-box {
-  width: 100%;
-  margin-top: 15px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .schedule-header {
   display: flex;
-  justify-content: space-between;
-  background-color: #f2f2f2;
+  background-color: #f1f3f5;
   padding: 15px;
   font-weight: bold;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .schedule-row {
   display: flex;
-  justify-content: space-between;
   padding: 15px;
-  border-bottom: 1px solid #eee;
-  color: #555;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .schedule-header span, .schedule-row span {
-  width: 25%; /* To'rtta ustunni teng bo'lish uchun */
-  text-align: left;
+  flex: 1; 
+  font-size: 14px;
 }

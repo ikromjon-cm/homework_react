@@ -5,7 +5,6 @@ import Picture from '../assets/Comunity.png';
 const Sidebar = ({ data, second, tasks }) => {
   return (
     <div className="wrapper">
-      {/* Sidebar - Chap tomon */}
       <div className='container'>
         <div className="contain">
           <div className="header">
@@ -29,13 +28,11 @@ const Sidebar = ({ data, second, tasks }) => {
         </div>
       </div>
 
-      {/* Asosiy Content - O'ng tomon */}
       <div className="containig">
         <header>
           <span><a className='logo' href="/">Dashboard</a></span>
         </header>
 
-        {/* Yuqoridagi kartochkalar (Design 3D va h.k) */}
         <div className="middle">
           <div className="carts">
             {second.map((item, index) => (
@@ -52,9 +49,7 @@ const Sidebar = ({ data, second, tasks }) => {
           </div>
         </div>
 
-        {/* Tasks va Student Scores qismi (YONMA-YON) */}
         <div className="main-grid">
-          {/* Tasks qismi */}
           <div className="tasks-container">
             <h2 className="section-title">Tasks From The Teacher</h2>
             {tasks.map((task) => (
@@ -68,7 +63,6 @@ const Sidebar = ({ data, second, tasks }) => {
             ))}
           </div>
 
-          {/* Student Test Scores qismi (YANGI QO'SHILDI) */}
           <div className="scores-container">
             <h2 className="section-title">Student Test Scores</h2>
             <div className="score-user">
@@ -94,7 +88,6 @@ const Sidebar = ({ data, second, tasks }) => {
           </div>
         </div>
 
-        {/* Pastdagi Jadval */}
         <div className="exam-section">
           <h2>Exam Schedule</h2>
           <div className="schedule-box">
