@@ -5,13 +5,13 @@ import Picture from '../assets/Comunity.png';
 const Sidebar = ({ data, second, tasks }) => {
   return (
     <div className="wrapper">
+      {/* Sidebar - Chap tomon */}
       <div className='container'>
         <div className="contain">
           <div className="header">
             <img src={Logo} alt="logo" />
             <h2>EduWave</h2>
           </div>
-
           <div className="bottom">
             {data.map((item, index) => (
               <div key={index} className="with">
@@ -21,7 +21,6 @@ const Sidebar = ({ data, second, tasks }) => {
             ))}
           </div>
         </div>
-
         <div className="underbottom">
           <img src={Picture} alt="premium" />
           <h3>Exclusive Community</h3>
@@ -30,11 +29,13 @@ const Sidebar = ({ data, second, tasks }) => {
         </div>
       </div>
 
+      {/* Asosiy Content - O'ng tomon */}
       <div className="containig">
         <header>
           <span><a className='logo' href="/">Dashboard</a></span>
         </header>
 
+        {/* Yuqoridagi kartochkalar (Design 3D va h.k) */}
         <div className="middle">
           <div className="carts">
             {second.map((item, index) => (
@@ -51,9 +52,11 @@ const Sidebar = ({ data, second, tasks }) => {
           </div>
         </div>
 
-        <div className="tasks-wrap">
+        {/* Tasks va Student Scores qismi (YONMA-YON) */}
+        <div className="main-grid">
+          {/* Tasks qismi */}
           <div className="tasks-container">
-            <h2 style={{ marginBottom: '24px' }}>Tasks From The Teacher</h2>
+            <h2 className="section-title">Tasks From The Teacher</h2>
             {tasks.map((task) => (
               <div key={task.id} className={`task-card ${task.active ? 'active' : 'light'}`}>
                 <div className="task-info">
@@ -64,9 +67,34 @@ const Sidebar = ({ data, second, tasks }) => {
               </div>
             ))}
           </div>
+
+          {/* Student Test Scores qismi (YANGI QO'SHILDI) */}
+          <div className="scores-container">
+            <h2 className="section-title">Student Test Scores</h2>
+            <div className="score-user">
+               <div className="user-avatar">👤</div>
+               <div>
+                  <h4>Drew Newton</h4>
+                  <small>Class 12</small>
+               </div>
+            </div>
+            
+            <div className="score-item active-blue">
+              <span>🎨 Art and Design</span>
+              <strong>85</strong>
+            </div>
+            <div className="score-item">
+              <span>📖 English Lessons</span>
+              <strong>79</strong>
+            </div>
+            <div className="score-item">
+              <span>📐 Basic Mathematic</span>
+              <strong>75</strong>
+            </div>
+          </div>
         </div>
 
-        {/* --- RASMDAGI JADVAL ENDI SAYTNING ENG TAGIDA --- */}
+        {/* Pastdagi Jadval */}
         <div className="exam-section">
           <h2>Exam Schedule</h2>
           <div className="schedule-box">
@@ -76,21 +104,18 @@ const Sidebar = ({ data, second, tasks }) => {
               <span>Subjects</span>
               <span>Exam Room</span>
             </div>
-
             <div className="schedule-row">
               <span>Mon, April 29 2024</span>
               <span>8.00</span>
               <span>Plant Research</span>
               <span>Science Laboratory</span>
             </div>
-
             <div className="schedule-row">
               <span>Tue, April 30 2024</span>
               <span>9.00</span>
               <span>English</span>
               <span>Classroom</span>
             </div>
-
             <div className="schedule-row">
               <span>Wed, May 1 2024</span>
               <span>8.00</span>
