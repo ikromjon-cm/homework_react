@@ -1,51 +1,90 @@
-import Vector from '../public/Vector.png'
-import Dashboard from '../public/Dashboard.png'
-import Edu from '../public/edu.png'
-import Group from '../public/Group.png'
-import Dis from '../public/dis.png'
-import Calendar from '../public/Icons.png'
-import Settings from '../public/settings.png'
-import React from 'react'
-import Sidebar from './Sidebar/Sidebar'
+import React from "react";
+import Logo from './assets/Vector.png'
+import Sidebar from "./Sidebar/Sidebar";
 const data = [
   {
-    images:Edu,
-    headtitle:'EduWave'
+    icon: "📱",
+    title: "Dashboard",
   },
   {
-    img:Dashboard,
-    title:'Dashboard'
+    icon: "📔",
+    title: "Dashboard",
   },
-    {
-    img:Vector,
-    title:'course'
+  {
+    icon: "📃",
+    title: "Dashboard",
   },
-    {
-    img:Group,
-    title:'task'
+  {
+    icon: "👥",
+    title: "Discussion",
   },
-    {
-    img:Dis,
-    title:'discussion'
+  {
+    icon: "📆",
+    title: "Calendar",
   },
-    {
-    img:Calendar,
-    title:'calendar'
+  {
+    icon: "🎇",
+    title: "Settings",
   },
-      {
-    img:Settings ,
-    title:'settings'
-  }
+];
+const second = [
+  {
+    url: 'https://media.licdn.com/dms/image/v2/C561BAQG8gU6ynxI6GQ/company-background_10000/company-background_10000/0/1585488097505/cominity_cover?e=2147483647&v=beta&t=BBO-h3IGWkZmiarmzOLvJ7aPezjHEHmeeNs2WlJWcZM',
+    title: "Design 3D",
+    subtitle: "Art and Design",
+    icons: "👥",
+    button: ">",
+  },
+  {
+    url: 'https://thumbs.dreamstime.com/b/gran-canaria-port-colorful-buildings-grancnaria-fine-day-30607587.jpg',
+    title: "Interactive Sosial",
+    subtitle: "Art and Design",
+    icons: "👥",
+    button: ">",
+  },
+  {
+    url: 'https://images.privateproperty.com.ng/large/property-for-sale-in-benin-city-3bedroom-apartment-attached-with-2units-of-room-and-parlor-self-contain-in-dpc-level-in-a-land-measuring-50100-7pK2kCgoFsb4OrYLXLMT.jpg',
+    title: "Calculating Data",
+    subtitle: "Art and Design",
+    icons: "👥",
+    button: ">",
+  },
+];
+const tasks = [
+  {
+    id: 1,
+    title: "Natural science",
+    date: "24 April 2024, 12.30",
 
+  },
+  {
+    id: 2,
+    title: "Basic Mathematic",
+    date: "24 April 2024, 12.30",
 
+  },
+  {
+    id: 3,
+    title: "English Lessons",
+    date: "24 April 2024, 12.30",
 
+  },
 
+];
+const two = [{}];
 
-]
-export default function App() {
+const App = () => {
   return (
-    <div>
-      <Sidebar data={data}/>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        alignItems: "start",
+      }}
+    >
+      <Sidebar tasks={tasks} two={two} second={second} data={data} />
     </div>
-  )
-}
+  );
+};
+
+export default App;
